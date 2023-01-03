@@ -1,0 +1,17 @@
+﻿<Window x:Class="BNM_API.RateInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BNM_API"
+        mc:Ignorable="d"
+        Title="RateInfo" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="currency_code_text" HorizontalAlignment="Left" Margin="74,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Currency Code"/></TextBlock>
+        <TextBlock x:Name="date_text" HorizontalAlignment="Left" Margin="74,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Date"/></TextBlock>
+        <TextBlock x:Name="buying_rate_text" HorizontalAlignment="Left" Margin="74,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Buying Rate"/></TextBlock>
+        <TextBlock x:Name="selling_rate_text" HorizontalAlignment="Left" Margin="74,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Selling Rate"/></TextBlock>
+        <TextBlock x:Name="middle_rate_text" HorizontalAlignment="Left" Margin="74,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Middle Rate"/></TextBlock>
+        <Button x:Name="Load_exchange_rate" Content="Load Exchange Rates" HorizontalAlignment="Left" Height="38" Margin="74,10,0,0" VerticalAlignment="Top" Width="664" Click="Load_exchange_rate_Click"/>
+    </Grid>
+</Window>
