@@ -7,11 +7,16 @@
         mc:Ignorable="d"
         Title="RateInfo" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="currency_code_text" HorizontalAlignment="Left" Margin="74,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Currency Code"/></TextBlock>
-        <TextBlock x:Name="date_text" HorizontalAlignment="Left" Margin="74,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Date"/></TextBlock>
-        <TextBlock x:Name="buying_rate_text" HorizontalAlignment="Left" Margin="74,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Buying Rate"/></TextBlock>
-        <TextBlock x:Name="selling_rate_text" HorizontalAlignment="Left" Margin="74,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Selling Rate"/></TextBlock>
-        <TextBlock x:Name="middle_rate_text" HorizontalAlignment="Left" Margin="74,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91"><Run Language="en-my" Text="Middle Rate"/></TextBlock>
-        <Button x:Name="Load_exchange_rate" Content="Load Exchange Rates" HorizontalAlignment="Left" Height="38" Margin="74,10,0,0" VerticalAlignment="Top" Width="664" Click="Load_exchange_rate_Click"/>
+        <TextBlock x:Name="currency_code_text" HorizontalAlignment="Left" Margin="195,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <TextBlock x:Name="date_text" HorizontalAlignment="Left" Margin="195,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <TextBlock x:Name="buying_rate_text" HorizontalAlignment="Left" Margin="195,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <TextBlock x:Name="selling_rate_text" HorizontalAlignment="Left" Margin="195,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <TextBlock x:Name="middle_rate_text" HorizontalAlignment="Left" Margin="195,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <Button x:Name="Load_exchange_rate" Content="Load Exchange Rates" HorizontalAlignment="Center" Height="38" Margin="0,333,0,0" VerticalAlignment="Top" Width="664" Click="Load_exchange_rate_Click"/>
+        <Label x:Name="currency_code_label" Content="Currency Code:" HorizontalAlignment="Left" Margin="74,69,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <Label x:Name="currency_code_label_Copy" Content="Date:" HorizontalAlignment="Left" Margin="74,104,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <Label x:Name="currency_code_label_Copy1" Content="Buying Rate:" HorizontalAlignment="Left" Margin="74,139,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <Label x:Name="currency_code_label_Copy2" Content="Buying Rate:" HorizontalAlignment="Left" Margin="74,177,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <Label x:Name="currency_code_label_Copy3" Content="Buying Rate:" HorizontalAlignment="Left" Margin="74,212,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
     </Grid>
 </Window>

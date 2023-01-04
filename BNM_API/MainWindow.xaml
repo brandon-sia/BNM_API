@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Load Exchange Rates" HorizontalAlignment="Left" Margin="312,32,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Exchange_Rates_Click"/>
+        <Button Content="Forex Rates" HorizontalAlignment="Left" Margin="312,32,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Exchange_Rates_Click"/>
 
     </Grid>
 </Window>
