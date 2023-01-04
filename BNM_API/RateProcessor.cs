@@ -1,11 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace BNM_API
 {
@@ -21,8 +24,9 @@ namespace BNM_API
         {
             string url = "";
 
-            // obtain latest exchange rate
-            url = "https://api.bnm.gov.my/public/exchange-rate/AUD?session=0900&quote=rm";
+            // obtain latest exchange rate            
+
+            url = $"https://api.bnm.gov.my/public/exchange-rate/{RateInfo.currency_code}?session=0900&quote=rm";
 
             using (HttpResponseMessage? response = await ApiHelper.ApiClient.GetAsync(url))
             {

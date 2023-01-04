@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace BNM_API
 {
     /// <summary>
@@ -20,21 +21,28 @@ namespace BNM_API
     /// </summary>
     public partial class RateInfo : Window
     {
+        public static string? currency_code { get; set; }
         public RateInfo()
         {
             InitializeComponent();
         }
 
-        private async void Load_exchange_rate_Click(object sender, RoutedEventArgs e)
+        public async void Load_exchange_rate_Click(object sender, RoutedEventArgs e)
         {
-            var rateInfo = await RateProcessor.LoadRates();
 
-            currency_code_text.Text = $"{rateInfo.currency_code}";
+            currency_code = currency_code_comboBox.Text;
+            var rateInfo = await RateProcessor.LoadRates();
+            
             date_text.Text = $"{rateInfo.rate.date}";
             buying_rate_text.Text = $"{rateInfo.rate.buying_rate}";
             selling_rate_text.Text = $"{rateInfo.rate.selling_rate}";
             middle_rate_text.Text = $"{rateInfo.rate.middle_rate}";
+            unit_text.Text = $"{rateInfo.unit}";
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
