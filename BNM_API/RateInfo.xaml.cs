@@ -21,7 +21,8 @@ namespace BNM_API
     /// </summary>
     public partial class RateInfo : Window
     {
-        public static string? currency_code { get; set; }
+        internal static string? currency_code { get; set; }
+        internal static string? session { get; set; }
         public RateInfo()
         {
             InitializeComponent();
@@ -31,13 +32,25 @@ namespace BNM_API
         {
 
             currency_code = currency_code_comboBox.Text;
-            var rateInfo = await RateProcessor.LoadRates();
-            
-            date_text.Text = $"{rateInfo.rate.date}";
-            buying_rate_text.Text = $"{rateInfo.rate.buying_rate}";
-            selling_rate_text.Text = $"{rateInfo.rate.selling_rate}";
-            middle_rate_text.Text = $"{rateInfo.rate.middle_rate}";
-            unit_text.Text = $"{rateInfo.unit}";
+            session = session_comboBox.Text;
+
+            try
+            {
+                var rateInfo = await RateProcessor.LoadRates();
+
+                date_text.Text = $"{rateInfo.rate.date}";
+                buying_rate_text.Text = $"{rateInfo.rate.buying_rate}";
+                selling_rate_text.Text = $"{rateInfo.rate.selling_rate}";
+                middle_rate_text.Text = $"{rateInfo.rate.middle_rate}";
+                unit_text.Text = $"{rateInfo.unit}";
+
+            }
+            catch(Exception ex)
+            {
+                string message = "No data found";
+                MessageBox.Show(message);
+            }
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

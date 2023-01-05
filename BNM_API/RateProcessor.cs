@@ -14,8 +14,8 @@ namespace BNM_API
 {
     internal class RateObject
     {
-        public RateModel data { get; set; }
-        public MetaModel meta { get; set; }
+        public RateModel? data { get; set; }
+        public MetaModel? meta { get; set; }
 
     }
     internal class RateProcessor
@@ -26,7 +26,7 @@ namespace BNM_API
 
             // obtain latest exchange rate            
 
-            url = $"https://api.bnm.gov.my/public/exchange-rate/{RateInfo.currency_code}?session=0900&quote=rm";
+            url = $"https://api.bnm.gov.my/public/exchange-rate/{RateInfo.currency_code}?session={RateInfo.session}&quote=rm";
 
             using (HttpResponseMessage? response = await ApiHelper.ApiClient.GetAsync(url))
             {

@@ -7,17 +7,21 @@
         mc:Ignorable="d"
         Title="RateInfo" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="date_text" HorizontalAlignment="Left" Margin="195,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
-        <TextBlock x:Name="buying_rate_text" HorizontalAlignment="Left" Margin="195,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
-        <TextBlock x:Name="selling_rate_text" HorizontalAlignment="Left" Margin="195,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
-        <TextBlock x:Name="middle_rate_text" HorizontalAlignment="Left" Margin="195,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
-        <Button x:Name="Load_exchange_rate" Content="Load Exchange Rates" HorizontalAlignment="Center" Height="38" Margin="0,333,0,0" VerticalAlignment="Top" Width="664" Click="Load_exchange_rate_Click"/>
-        <Label x:Name="currency_code_label" Content="Currency Code:" HorizontalAlignment="Left" Margin="74,69,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <Label x:Name="currency_code_label_Copy" Content="Date:" HorizontalAlignment="Left" Margin="74,104,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <Label x:Name="currency_code_label_Copy1" Content="Buying Rate:" HorizontalAlignment="Left" Margin="74,139,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <Label x:Name="currency_code_label_Copy2" Content="Selling Rate:" HorizontalAlignment="Left" Margin="74,177,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <Label x:Name="currency_code_label_Copy3" Content="Middle Rate:" HorizontalAlignment="Left" Margin="74,212,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <ComboBox x:Name="currency_code_comboBox" HorizontalAlignment="Left" Margin="195,71,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="date_text" HorizontalAlignment="Left" Margin="195,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text="" Grid.Row="1"/>
+        <TextBlock x:Name="buying_rate_text" HorizontalAlignment="Left" Margin="195,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text="" Grid.Row="1"/>
+        <TextBlock x:Name="selling_rate_text" HorizontalAlignment="Left" Margin="195,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text="" Grid.Row="1"/>
+        <TextBlock x:Name="middle_rate_text" HorizontalAlignment="Left" Margin="195,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text="" Grid.Row="1"/>
+        <Button x:Name="Load_exchange_rate" Content="Load Exchange Rates" HorizontalAlignment="Center" Height="38" Margin="0,305,0,0" VerticalAlignment="Top" Width="664" Click="Load_exchange_rate_Click" Grid.Row="1"/>
+        <Label x:Name="currency_code_label" Content="Currency Code:" HorizontalAlignment="Left" Margin="74,26,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.RowSpan="2"/>
+        <Label x:Name="currency_code_label_Copy" Content="Date:" HorizontalAlignment="Left" Margin="74,76,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.Row="1"/>
+        <Label x:Name="currency_code_label_Copy1" Content="Buying Rate:" HorizontalAlignment="Left" Margin="74,111,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.Row="1"/>
+        <Label x:Name="currency_code_label_Copy2" Content="Selling Rate:" HorizontalAlignment="Left" Margin="74,149,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.Row="1"/>
+        <Label x:Name="currency_code_label_Copy3" Content="Middle Rate:" HorizontalAlignment="Left" Margin="74,184,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.Row="1"/>
+        <ComboBox x:Name="currency_code_comboBox" HorizontalAlignment="Left" Margin="195,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.RowSpan="2">
             <ComboBoxItem Content="CHF"/>
             <ComboBoxItem Content="CAD"/>
             <ComboBoxItem Content="BND"/>
@@ -47,7 +51,14 @@
             <ComboBoxItem Content="EGP"/>
 
         </ComboBox>
-        <Label x:Name="currency_code_label_Copy4" Content="Unit:" HorizontalAlignment="Left" Margin="74,247,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
-        <TextBlock x:Name="unit_text" HorizontalAlignment="Left" Margin="195,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <Label x:Name="currency_code_label_Copy4" Content="Unit:" HorizontalAlignment="Left" Margin="74,219,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.Row="1"/>
+        <TextBlock x:Name="unit_text" HorizontalAlignment="Left" Margin="195,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text="" Grid.Row="1"/>
+        <Label x:Name="currency_code_label_Copy5" Content="Session:" HorizontalAlignment="Left" Margin="369,26,0,0" VerticalAlignment="Top" Width="103" Height="35" Grid.RowSpan="2"/>
+        <ComboBox x:Name="session_comboBox" HorizontalAlignment="Left" Margin="452,28,0,0" VerticalAlignment="Top" Width="120" Grid.RowSpan="2">
+            <ComboBoxItem Content="0900"/>
+            <ComboBoxItem Content="1130"/>
+            <ComboBoxItem Content="1200"/>
+            <ComboBoxItem Content="1700"/>
+        </ComboBox>
     </Grid>
 </Window>
