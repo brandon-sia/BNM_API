@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNM_API", "BNM_API\BNM_API.csproj", "{3808F5E8-95BB-4303-BFAA-B30CB56A048C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BNM_API", "BNM_API\BNM_API.csproj", "{3808F5E8-95BB-4303-BFAA-B30CB56A048C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BNM", "BNM\BNM.vdproj", "{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{3808F5E8-95BB-4303-BFAA-B30CB56A048C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3808F5E8-95BB-4303-BFAA-B30CB56A048C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3808F5E8-95BB-4303-BFAA-B30CB56A048C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}.Debug|Any CPU.ActiveCfg = Debug
+		{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
