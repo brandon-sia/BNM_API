@@ -26,7 +26,7 @@ namespace BNM_API
 
             // obtain latest exchange rate            
 
-            url = $"https://api.bnm.gov.my/public/exchange-rate/{RateInfo.currency_code}?session={RateInfo.session}&quote=rm";
+            url = $"https://api.bnm.gov.my/public/exchange-rate/{RateInfo.currency_code}/date/{RateInfo.exchange_rate_date}?session={RateInfo.session}&quote=rm";
 
             using (HttpResponseMessage? response = await ApiHelper.ApiClient.GetAsync(url))
             {

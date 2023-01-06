@@ -23,6 +23,7 @@ namespace BNM_API
     {
         internal static string? currency_code { get; set; }
         internal static string? session { get; set; }
+        internal static string? exchange_rate_date { get; set; }
         public RateInfo()
         {
             InitializeComponent();
@@ -33,12 +34,13 @@ namespace BNM_API
 
             currency_code = currency_code_comboBox.Text;
             session = session_comboBox.Text;
+            exchange_rate_date = exchange_rate_datePicker.SelectedDate.Value.ToString("yyyy-MM-dd");
 
             try
             {
                 var rateInfo = await RateProcessor.LoadRates();
 
-                date_text.Text = $"{rateInfo.rate.date}";
+                //date_text.Text = $"{rateInfo.rate.date}";
                 buying_rate_text.Text = $"{rateInfo.rate.buying_rate}";
                 selling_rate_text.Text = $"{rateInfo.rate.selling_rate}";
                 middle_rate_text.Text = $"{rateInfo.rate.middle_rate}";
