@@ -32,5 +32,11 @@ namespace BNM_API
             RateInfo exchange_rate_info = new ();
             exchange_rate_info.Show();
         }
+
+        private void OPR_Click(object sender, RoutedEventArgs e)
+        {
+            OPR_Info opr_info = new();
+            opr_info.Show();
+        }
     }
 }

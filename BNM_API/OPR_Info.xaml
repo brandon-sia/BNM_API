@@ -1,0 +1,40 @@
+﻿<Window x:Class="BNM_API.OPR_Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BNM_API"
+        mc:Ignorable="d"
+        Title="OPR" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="OPR_text" HorizontalAlignment="Left" Margin="255,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <Label x:Name="currency_code_label" Content="Select year:" HorizontalAlignment="Left" Margin="74,26,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <Label x:Name="currency_code_label_Copy1" Content="Overnight Policy Rate (%):" HorizontalAlignment="Left" Margin="74,139,0,0" VerticalAlignment="Top" Width="166" Height="35"/>
+        <Label x:Name="currency_code_label_Copy2" Content="Change (%)" HorizontalAlignment="Left" Margin="74,177,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <ComboBox x:Name="year_comboBox" HorizontalAlignment="Left" Margin="195,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="year_comboBox_SelectionChanged">
+            <ComboBoxItem Content="2008"/>
+            <ComboBoxItem Content="2009"/>
+            <ComboBoxItem Content="2010"/>
+            <ComboBoxItem Content="2011"/>
+            <ComboBoxItem Content="2012"/>
+            <ComboBoxItem Content="2013"/>
+            <ComboBoxItem Content="2014"/>
+            <ComboBoxItem Content="2015"/>
+            <ComboBoxItem Content="2016"/>
+            <ComboBoxItem Content="2017"/>
+            <ComboBoxItem Content="2018"/>
+            <ComboBoxItem Content="2019"/>
+            <ComboBoxItem Content="2020"/>
+            <ComboBoxItem Content="2021"/>
+            <ComboBoxItem Content="2022"/>
+            <ComboBoxItem Content="2023"/>
+
+
+        </ComboBox>
+        <TextBlock x:Name="change_rate_text" HorizontalAlignment="Left" Margin="255,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="91" Text=""/>
+        <Label x:Name="date_label" Content="Select date:" HorizontalAlignment="Left" Margin="369,26,0,0" VerticalAlignment="Top" Width="103" Height="35"/>
+        <ComboBox x:Name="date_comboBox" HorizontalAlignment="Left" Margin="494,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="date_comboBox_SelectionChanged"/>
+
+
+    </Grid>
+</Window>
