@@ -9,6 +9,7 @@
     <Grid>
         <Button Content="Forex Rates" HorizontalAlignment="Left" Margin="63,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Exchange_Rates_Click"/>
         <Button Content="Overnight Policy Rate" HorizontalAlignment="Left" Margin="248,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="OPR_Click"/>
+        <Button Content="All Bank Rates" HorizontalAlignment="Left" Margin="436,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Bank_Click"/>
 
     </Grid>
 </Window>

@@ -34,7 +34,7 @@ namespace BNM_API
 
             currency_code = currency_code_comboBox.Text;
             session = session_comboBox.Text;
-            exchange_rate_date = exchange_rate_datePicker.SelectedDate.Value.ToString("yyyy-MM-dd");
+            exchange_rate_date = exchange_rate_datePicker?.SelectedDate.Value.ToString("yyyy-MM-dd");
 
             try
             {

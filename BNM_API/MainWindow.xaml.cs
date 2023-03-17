@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BNM_API.Bank_Rates;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace BNM_API
         private void Exchange_Rates_Click(object sender, RoutedEventArgs e)
         {
 
-            RateInfo exchange_rate_info = new ();
+            RateInfo exchange_rate_info = new();
             exchange_rate_info.Show();
         }
 
@@ -37,6 +38,12 @@ namespace BNM_API
         {
             OPR_Info opr_info = new();
             opr_info.Show();
+        }
+
+        private void Bank_Click(object sender, RoutedEventArgs e)
+        {
+            BankInfo bank_info = new();
+            bank_info.Show();
         }
     }
 }
