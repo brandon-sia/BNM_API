@@ -5,11 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BNM_API"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Bank Negara Malaysia Data" Height="500" Width="800" FontSize="14">
     <Grid>
-        <Button Content="Forex Rates" HorizontalAlignment="Left" Margin="63,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Exchange_Rates_Click"/>
-        <Button Content="Overnight Policy Rate" HorizontalAlignment="Left" Margin="248,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="OPR_Click"/>
-        <Button Content="All Bank Rates" HorizontalAlignment="Left" Margin="436,33,0,0" VerticalAlignment="Top" Height="50" Width="152" Click="Bank_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Forex Rates" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Height="50" Width="152" Click="Exchange_Rates_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Overnight Policy Rate" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Height="50" Width="152" Click="OPR_Click" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="All Bank Rates" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Height="50" Width="152" Click="Bank_Click" Grid.Row="3" Grid.Column="1"/>
+        <Image Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="90" Margin="10" VerticalAlignment="Top" Width="90" Source="/Resources/bank.png"/>
 
     </Grid>
 </Window>

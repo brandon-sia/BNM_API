@@ -81,7 +81,6 @@ namespace BNM_API.Bank_Rates
                     eff_lending_rate_textBlock.Text = null;
                 }
 
-
             }
             catch (Exception ex)
             {
@@ -90,7 +89,14 @@ namespace BNM_API.Bank_Rates
             }
         }
 
-   
+        private void ExportExcelButton_Click(object sender, RoutedEventArgs e)
+        {
+            DictionaryExcelExportable<string, BankModel> dictionaryExport = new DictionaryExcelExportable<string, BankModel>(BankDict, "Malaysia Banking Data.xlsx");
+
+            dictionaryExport.ExportToExcel("Data");
+
+
+        }
     }
 
 }

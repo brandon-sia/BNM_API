@@ -8,8 +8,7 @@
         Title="" Height="450" Width="800">
     <Grid Margin="20,20,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -24,22 +23,26 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
 
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock TextWrapping="Wrap" Text="Select a bank: " Grid.Row="0" Grid.Column="0" Margin="10" FontSize="18" FontStyle="Italic"/>
-        <TextBlock TextWrapping="Wrap" Text="Bank Code: " Grid.Row="1" Grid.Column="0" Margin="10" FontSize="18"/>
-        <TextBlock TextWrapping="Wrap" Text="Bank Name: " Grid.Row="2" Grid.Column="0" Margin="10" FontSize="18"/>
-        <TextBlock TextWrapping="Wrap" Text="Base Rate (%): " Grid.Row="3" Grid.Column="0" Margin="10" FontSize="18"/>
-        <TextBlock TextWrapping="Wrap" Text="Base Lending Rate (%): " Grid.Row="4" Grid.Column="0" Margin="10" FontSize="18"/>
-        <TextBlock TextWrapping="Wrap" Text="Indicative Effective Lending Rate (%): " Grid.Row="5" Grid.Column="0" Margin="10" FontSize="18"/>
+        <TextBlock TextWrapping="Wrap" Text="Select a bank: " Grid.Row="1" Grid.Column="0" Margin="10" FontSize="14" FontStyle="Italic"/>
+        <TextBlock TextWrapping="Wrap" Text="Bank Code: " Grid.Row="2" Grid.Column="0" Margin="10" FontSize="14"/>
+        <TextBlock TextWrapping="Wrap" Text="Bank Name: " Grid.Row="3" Grid.Column="0" Margin="10" FontSize="14"/>
+        <TextBlock TextWrapping="Wrap" Text="Base Rate (%): " Grid.Row="4" Grid.Column="0" Margin="10" FontSize="14"/>
+        <TextBlock TextWrapping="Wrap" Text="Base Lending Rate (%): " Grid.Row="5" Grid.Column="0" Margin="10" FontSize="14"/>
+        <TextBlock TextWrapping="Wrap" Text="Indicative Effective Lending Rate (%): " Grid.Row="6" Grid.Column="0" Margin="10" FontSize="14"/>
 
-        <ComboBox x:Name="bank_name_comboBox" HorizontalAlignment="Center" Margin="10,10,10,10" VerticalAlignment="Top" Width="400" Grid.Column="1" Grid.ColumnSpan="2" FontSize="18" TextBlock.FontSize="18" SelectionChanged="bank_name_comboBox_SelectionChanged"/>
-        <TextBlock x:Name="bank_code_textBlock" TextWrapping="Wrap" Text="" Grid.Row="1" Grid.Column="1" Margin="10" FontSize="18"/>
-        <TextBlock x:Name="bank_name_textBlock" TextWrapping="Wrap" Text="" Grid.Row="2" Grid.Column="1" Margin="10" FontSize="18"/>
-        <TextBlock x:Name="base_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="3" Grid.Column="1" Margin="10" FontSize="18"/>
-        <TextBlock x:Name="base_lending_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="4" Grid.Column="1" Margin="10" FontSize="18"/>
-        <TextBlock x:Name="eff_lending_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="5" Grid.Column="1" Margin="10" FontSize="18"/>
+        <ComboBox x:Name="bank_name_comboBox" HorizontalAlignment="Center" Margin="10,10,10,10" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" FontSize="18" TextBlock.FontSize="14" SelectionChanged="bank_name_comboBox_SelectionChanged" Width="373"/>
+        <TextBlock x:Name="bank_code_textBlock" TextWrapping="Wrap" Text="" Grid.Row="2" Grid.Column="1" Margin="10" FontSize="14"/>
+        <TextBlock x:Name="bank_name_textBlock" TextWrapping="Wrap" Text="" Grid.Row="3" Grid.Column="1" Margin="10" FontSize="14"/>
+        <TextBlock x:Name="base_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="4" Grid.Column="1" Margin="10" FontSize="14"/>
+        <TextBlock x:Name="base_lending_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="5" Grid.Column="1" Margin="10" FontSize="14"/>
+        <TextBlock x:Name="eff_lending_rate_textBlock" TextWrapping="Wrap" Text="" Grid.Row="6" Grid.Column="1" Margin="10" FontSize="14"/>
+        <Button x:Name="ExportExcelButton" Grid.Column="0" Content="Export all to Excel" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" Height="30" Width="136" Click="ExportExcelButton_Click" Margin="10,0,0,0"/>
 
 
     </Grid>

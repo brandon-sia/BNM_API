@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BNM_API", "BNM_API\BNM_API.
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BNM", "BNM\BNM.vdproj", "{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BNM_Setup", "BNM_Setup\BNM_Setup.vdproj", "{1B0FE705-53BB-4A68-B968-C8DAB47CAB0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{C47CCC4C-2C3E-46D7-8855-CC22148B6CC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,8 @@ Global
 		{3808F5E8-95BB-4303-BFAA-B30CB56A048C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}.Debug|Any CPU.ActiveCfg = Debug
 		{50F10E8D-64B2-4182-B913-FE1AE33B8E3C}.Release|Any CPU.ActiveCfg = Release
+		{1B0FE705-53BB-4A68-B968-C8DAB47CAB0B}.Debug|Any CPU.ActiveCfg = Debug
+		{1B0FE705-53BB-4A68-B968-C8DAB47CAB0B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
